@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-class JDBCExample2_Oracle1_column_name_goodsinfo {
+class JDBCExample2_Oracle1_column_name_goodsinfo_테이블확인용 {
 	public static void main(String args[]) {
 		Connection conn = null;
 		Statement stmt = null;
