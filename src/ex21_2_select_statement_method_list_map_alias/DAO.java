@@ -23,7 +23,7 @@ public class DAO {
             conn = DriverManager.getConnection(url, "scott", "tiger");
             stmt = conn.createStatement();
 
-            String select_sql = "select deptno,max(sal),count(*)"
+            String select_sql = "select deptno,max(sal) as sal,count(*) "
             	    + "from emp "
             	    + "group by deptno";
             rs = stmt.executeQuery(select_sql);
@@ -32,7 +32,7 @@ public class DAO {
                 Map<String, Object> map = new HashMap<>();
 
                 map.put("deptno", rs.getInt("deptno"));
-                map.put("sal", rs.getInt("max(sal)"));
+                map.put("sal", rs.getInt("sal"));
                 map.put("cnt", rs.getInt("count(*)"));
 
                 list.add(map);
